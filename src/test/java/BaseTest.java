@@ -1,3 +1,5 @@
+import static utils.RestClient.authorizeUser;
+
 import configuration.ConfigurationReader;
 import java.util.Properties;
 import org.slf4j.Logger;
@@ -12,7 +14,6 @@ public class BaseTest {
     @BeforeMethod
     public void beforeTest() {
         LOGGER.info("{} properties were initialized", properties.size());
-
-
+        authorizeUser();
     }
 }
